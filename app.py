@@ -20,7 +20,6 @@ scheduler = AsyncIOScheduler(timezone='Europe/Moscow')
 @dp.message_handler(commands='start')
 async def cmd_start(message: types.Message):
     markup = ReplyKeyboardMarkup(resize_keyboard=True)
-
     markup.row(user_message, admin_message)
 
     await message.answer('''Good day! Let's start check our tasks.
